@@ -13,7 +13,7 @@ Installation:
 
 Clone the repository:
 
-git clone https://github.com/your-username/Flask-To-Do-App.git
+git clone https://github.com/imprntk/Flask-To-Do-App.git
 cd Flask-To-Do-App
 
 Set up a virtual environment:
