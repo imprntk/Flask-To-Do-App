@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" /> 
+        <title>Task Smash 2.0</title>  
+    </head>
+    <body>
+        <div class="content">
+            <h1>Pranit’s ActionPlan</h1>
+
+            
+            <table>
+                <tr>
+                    <th>Task</th>
+                    <th>Added</th>
+                    <th>Action</th>
+                </tr>
+            
+                {% for task in tasks %}
+                    <tr>
+                        <td>{{ task.content }}</td>
+                        <td>{{ task.create.strftime('%Y-%m-%d') }}</td>
+                        <td>
+                            <a href="/delete/{{ task.id }}">Delete</a>
+                            <br/>
+                            <a href="/edit/{{ task.id }}">Edit</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+
+            <form action="/" method="POST">
+                <input type="text" name="content" id="content" placeholder="Enter task..." required />
+                <input type="submit" value="Add Task" id="btn_add" />
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,111 @@
+// Color variables
+$primary-color: #007bff;
+$primary-hover-color: #0056b3;
+$success-color: #28a745;
+$success-hover-color: #218838;
+$title-color: #333;
+$light-bg-color: #f4f9f5; // Soft background for table headers and sections
+$hover-shadow-color: rgba(0, 123, 255, 0.3); // Subtle hover effect shadow
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.content {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  h1 {
+    color: $title-color;
+    font-size: 2.5em;
+    font-weight: 600; // Slightly bolder title
+  }
+
+  h4 {
+    color: #666;
+    font-size: 1.2em;
+  }
+
+  table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+
+    th,
+    td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+
+    th {
+      background-color: $light-bg-color; // Soft light gray
+      color: $title-color;
+      font-weight: 600;
+    }
+
+    td {
+      background-color: #fafafa; // Slightly lighter gray for table rows
+    }
+  }
+
+  a {
+    display: inline-block;
+    padding: 10px 18px;
+    margin: 8px;
+    border-radius: 25px; // More rounded edges
+    background-color: $primary-color;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px $hover-shadow-color; // Subtle shadow effect
+
+    &:hover {
+      background-color: $primary-hover-color;
+      box-shadow: 0 4px 12px $hover-shadow-color; // More pronounced shadow on hover
+    }
+  }
+
+  input {
+    padding: 12px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px; // Rounded corners for input
+    width: 100%; // Full-width input
+    background-color: #f9f9f9; // Light background for input fields
+    color: #333;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color; // Focus border in blue
+      box-shadow: 0 0 5px $hover-shadow-color; // Light blue glow effect
+    }
+  }
+
+  #add_btn {
+    background-color: $success-color;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    width: 100%; // Full-width button
+    padding: 12px;
+    border-radius: 8px; // Matching rounded corners with input fields
+    font-weight: 600;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      background-color: $success-hover-color;
+      box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3); // Subtle green shadow on hover
+    }
+  }
+}
